@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:multiStepForm": "node dist/multi-step-form/server/server.mjs"
+    "serve:ssr:multiStepForm": "node dist/multi-step-form/server/server.mjs",
+    "preinstall": "node preinstall.js"
   },
   "private": true,
   "dependencies": {

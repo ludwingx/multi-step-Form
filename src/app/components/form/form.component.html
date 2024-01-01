@@ -24,14 +24,40 @@
       </div>
       <div class="col">
         <div class="container step-component">
-            <div class="row">
-                <div class="col">
-                    <app-step1></app-step1>
-                </div>
+          <div class="row">
+            @if (step == 1){
+              <div class="col">
+                <app-step1></app-step1>
             </div>
-
-            
+            }@else if (step == 2) {
+              <div class="col">
+                <app-step2></app-step2>
+            </div>
+            }
+            @else if (step == 3) {
+              <div class="col">
+                <app-step3></app-step3>
+            </div>
+            }
+            @else  {
+              <div class="col">
+                <app-step4></app-step4>
+            </div>
+            }      
+          </div>
         </div>
+        <div class="row">
+          @if(step > 1){
+            <div class="col text-start">
+              <button type="submit" class="btn btn-primary" (click)="changeStep(step - 1)">Previous Step</button>
+          </div>
+          }
+          @if(step < 4){
+            <div class="col text-end">
+              <button type="submit" class="btn btn-primary" (click)="changeStep(step + 1)">Next Step</button>
+          </div>
+          }
       </div>
     </div>
   </div>
+</div>
