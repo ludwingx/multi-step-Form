@@ -12,5 +12,23 @@ import { Step4Component} from './step4/step4.component';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
+  step: number = 1;
 
+
+  changeStep(step: number) {
+    switch(step) {
+      case 1:
+        this.step = 1;
+        break;
+      case 2:
+        this.step = 2;
+        break;
+      case 3:
+        this.step = 3;
+        break;
+      case 4:
+        this.step = 4;
+        break;
+    }
+  }
 }
